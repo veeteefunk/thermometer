@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Thermometer Animation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="fa" id="thermo"></div>
+    </div>
+
+    <script>
+      function thermo() {
+        var i = document.getElementById("thermo");
+        i.innerHTML = "&#xf2cb;";
+        setTimeout(function () {
+          i.innerHTML = "&#xf2ca;";
+        }, 500);
+        setTimeout(function () {
+          i.innerHTML = "&#xf2c9;";
+        }, 1000);
+        setTimeout(function () {
+          i.innerHTML = "&#xf2c8;";
+        }, 1500);
+        setTimeout(function () {
+          i.innerHTML = "&#xf2c7;";
+        }, 2000);
+      }
+      thermo();
+      setInterval(thermo, 2500);
+    </script>
+  </body>
+</html>
